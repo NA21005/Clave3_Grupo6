@@ -16,7 +16,7 @@ namespace Clave3_Grupo6
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new iniciarSecion());
+            Application.Run(new formIniciarSesion());
         }
     }
 }

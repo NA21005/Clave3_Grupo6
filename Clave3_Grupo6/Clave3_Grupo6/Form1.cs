@@ -10,37 +10,24 @@ using System.Windows.Forms;
 
 namespace Clave3_Grupo6
 {
-    public partial class iniciarSecion : Form
+    public partial class formIniciarSesion : Form
     {
-        public iniciarSecion()
+        public formIniciarSesion()
         {
             InitializeComponent();
+            this.ttMensaje.SetToolTip(this.txtUsuario, "Ingrese su nombre de usuario");
+            this.ttMensaje.SetToolTip(this.txtContraseña, "Ingrese su contraseña");
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Contraseña_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Salir_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void inicioSesion_Click(object sender, EventArgs e)
+        private void btnInicioSesion_Click(object sender, EventArgs e)
         {
             //Declaracion de variables
-            Form Formulario1 = new iniciarSecion();
-            Form Formulario2 = new Seleccion();
+            Form Formulario1 = new formIniciarSesion();
+            Form Formulario2 = new formGerencia();
             string Cuenta, Contra;
 
-            Cuenta = Convert.ToString(Usuario.Text);
-            Contra = Convert.ToString(Contraseña.Text);
+            Cuenta = Convert.ToString(txtUsuario.Text);
+            Contra = Convert.ToString(txtContraseña.Text);
 
             // Validar si el usuario y contraseña son Correctos
             if (Cuenta == "prn115")
@@ -52,14 +39,18 @@ namespace Clave3_Grupo6
                 }
                 else
                 {
-                    MessageBox.Show("La contraseña es incorrecta");
+                    MessageBox.Show("La contraseña ingresada es incorrecta");
                 }
             }
             else
             {
-                MessageBox.Show("La cuenta es incorrecta");
+                MessageBox.Show("El usuario ingresado no es válido");
             }
+        }
 
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
