@@ -36,19 +36,30 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtCargo = new System.Windows.Forms.TextBox();
+            this.txtVentas = new System.Windows.Forms.TextBox();
+            this.txtSalario = new System.Windows.Forms.TextBox();
+            this.dgvPlanilla = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cargo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SalarioBase = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ventas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BonoVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Renta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SeguroPensionesEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SeguroPensionesEmpleador = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SeguroSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SalarioNeto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnRegresar = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnLimpiar = new System.Windows.Forms.Button();
+            this.btnMostrar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnActualizar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPlanilla)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -138,118 +149,184 @@
             this.label7.TabIndex = 4;
             this.label7.Text = "Salario:";
             // 
-            // textBox1
+            // txtNombre
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(160, 121);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 27);
-            this.textBox1.TabIndex = 5;
+            this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Location = new System.Drawing.Point(160, 121);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(200, 27);
+            this.txtNombre.TabIndex = 5;
             // 
-            // textBox2
+            // txtCargo
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(160, 180);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(200, 27);
-            this.textBox2.TabIndex = 6;
+            this.txtCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCargo.Location = new System.Drawing.Point(160, 180);
+            this.txtCargo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtCargo.Name = "txtCargo";
+            this.txtCargo.Size = new System.Drawing.Size(200, 27);
+            this.txtCargo.TabIndex = 6;
             // 
-            // textBox3
+            // txtVentas
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(560, 180);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(200, 27);
-            this.textBox3.TabIndex = 8;
+            this.txtVentas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVentas.Location = new System.Drawing.Point(560, 180);
+            this.txtVentas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtVentas.Name = "txtVentas";
+            this.txtVentas.Size = new System.Drawing.Size(200, 27);
+            this.txtVentas.TabIndex = 8;
             // 
-            // textBox4
+            // txtSalario
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(560, 121);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(200, 27);
-            this.textBox4.TabIndex = 7;
+            this.txtSalario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSalario.Location = new System.Drawing.Point(560, 121);
+            this.txtSalario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtSalario.Name = "txtSalario";
+            this.txtSalario.Size = new System.Drawing.Size(200, 27);
+            this.txtSalario.TabIndex = 7;
             // 
-            // button1
+            // dgvPlanilla
             // 
-            this.button1.Image = global::Clave3_Grupo6.Properties.Resources.btn;
-            this.button1.Location = new System.Drawing.Point(930, 150);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(149, 28);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Actualizar datos";
-            this.button1.UseVisualStyleBackColor = true;
+            this.dgvPlanilla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPlanilla.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
+            this.Nombre,
+            this.Cargo,
+            this.SalarioBase,
+            this.Ventas,
+            this.BonoVenta,
+            this.Renta,
+            this.SeguroPensionesEmpleado,
+            this.SeguroPensionesEmpleador,
+            this.SeguroSocial,
+            this.SalarioNeto});
+            this.dgvPlanilla.Location = new System.Drawing.Point(45, 235);
+            this.dgvPlanilla.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvPlanilla.Name = "dgvPlanilla";
+            this.dgvPlanilla.RowTemplate.Height = 24;
+            this.dgvPlanilla.Size = new System.Drawing.Size(840, 306);
+            this.dgvPlanilla.TabIndex = 15;
             // 
-            // button2
+            // id
             // 
-            this.button2.Image = global::Clave3_Grupo6.Properties.Resources.btn;
-            this.button2.Location = new System.Drawing.Point(930, 390);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(149, 28);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Eliminar empleado";
-            this.button2.UseVisualStyleBackColor = true;
+            this.id.HeaderText = "Id";
+            this.id.Name = "id";
             // 
-            // button3
+            // Nombre
             // 
-            this.button3.Image = global::Clave3_Grupo6.Properties.Resources.btn;
-            this.button3.Location = new System.Drawing.Point(930, 270);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(149, 28);
-            this.button3.TabIndex = 11;
-            this.button3.Text = "Mostrar planillas";
-            this.button3.UseVisualStyleBackColor = true;
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
             // 
-            // button4
+            // Cargo
             // 
-            this.button4.Image = global::Clave3_Grupo6.Properties.Resources.btn;
-            this.button4.Location = new System.Drawing.Point(930, 330);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(149, 28);
-            this.button4.TabIndex = 12;
-            this.button4.Text = "Limpiar campos";
-            this.button4.UseVisualStyleBackColor = true;
+            this.Cargo.HeaderText = "Cargo";
+            this.Cargo.Name = "Cargo";
             // 
-            // button5
+            // SalarioBase
             // 
-            this.button5.Image = global::Clave3_Grupo6.Properties.Resources.btn;
-            this.button5.Location = new System.Drawing.Point(930, 210);
-            this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(149, 28);
-            this.button5.TabIndex = 13;
-            this.button5.Text = "Agregar empleado";
-            this.button5.UseVisualStyleBackColor = true;
+            this.SalarioBase.HeaderText = "Salario Base";
+            this.SalarioBase.Name = "SalarioBase";
             // 
-            // button6
+            // Ventas
             // 
-            this.button6.Image = global::Clave3_Grupo6.Properties.Resources.btn;
-            this.button6.Location = new System.Drawing.Point(930, 450);
-            this.button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(149, 28);
-            this.button6.TabIndex = 14;
-            this.button6.Text = "Regresar";
-            this.button6.UseVisualStyleBackColor = true;
+            this.Ventas.HeaderText = "Ventas";
+            this.Ventas.Name = "Ventas";
             // 
-            // dataGridView1
+            // BonoVenta
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(45, 235);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(840, 306);
-            this.dataGridView1.TabIndex = 15;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.BonoVenta.HeaderText = "Bono por venta";
+            this.BonoVenta.Name = "BonoVenta";
+            // 
+            // Renta
+            // 
+            this.Renta.HeaderText = "Renta";
+            this.Renta.Name = "Renta";
+            // 
+            // SeguroPensionesEmpleado
+            // 
+            this.SeguroPensionesEmpleado.HeaderText = "Seguro de pensiones (empleado)";
+            this.SeguroPensionesEmpleado.Name = "SeguroPensionesEmpleado";
+            // 
+            // SeguroPensionesEmpleador
+            // 
+            this.SeguroPensionesEmpleador.HeaderText = "Seguro de pensiones (empleador)";
+            this.SeguroPensionesEmpleador.Name = "SeguroPensionesEmpleador";
+            // 
+            // SeguroSocial
+            // 
+            this.SeguroSocial.HeaderText = "Seguro social";
+            this.SeguroSocial.Name = "SeguroSocial";
+            // 
+            // SalarioNeto
+            // 
+            this.SalarioNeto.HeaderText = "Salario neto";
+            this.SalarioNeto.Name = "SalarioNeto";
+            // 
+            // btnRegresar
+            // 
+            this.btnRegresar.Image = global::Clave3_Grupo6.Properties.Resources.btn;
+            this.btnRegresar.Location = new System.Drawing.Point(930, 450);
+            this.btnRegresar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnRegresar.Name = "btnRegresar";
+            this.btnRegresar.Size = new System.Drawing.Size(149, 28);
+            this.btnRegresar.TabIndex = 14;
+            this.btnRegresar.Text = "Regresar";
+            this.btnRegresar.UseVisualStyleBackColor = true;
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Image = global::Clave3_Grupo6.Properties.Resources.btn;
+            this.btnAgregar.Location = new System.Drawing.Point(930, 150);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(149, 28);
+            this.btnAgregar.TabIndex = 13;
+            this.btnAgregar.Text = "Agregar empleado";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Image = global::Clave3_Grupo6.Properties.Resources.btn;
+            this.btnLimpiar.Location = new System.Drawing.Point(930, 390);
+            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(149, 28);
+            this.btnLimpiar.TabIndex = 12;
+            this.btnLimpiar.Text = "Limpiar campos";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            // 
+            // btnMostrar
+            // 
+            this.btnMostrar.Image = global::Clave3_Grupo6.Properties.Resources.btn;
+            this.btnMostrar.Location = new System.Drawing.Point(930, 210);
+            this.btnMostrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnMostrar.Name = "btnMostrar";
+            this.btnMostrar.Size = new System.Drawing.Size(149, 28);
+            this.btnMostrar.TabIndex = 11;
+            this.btnMostrar.Text = "Mostrar planillas";
+            this.btnMostrar.UseVisualStyleBackColor = true;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Image = global::Clave3_Grupo6.Properties.Resources.btn;
+            this.btnEliminar.Location = new System.Drawing.Point(930, 330);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(149, 28);
+            this.btnEliminar.TabIndex = 10;
+            this.btnEliminar.Text = "Eliminar empleado";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            // 
+            // btnActualizar
+            // 
+            this.btnActualizar.Image = global::Clave3_Grupo6.Properties.Resources.btn;
+            this.btnActualizar.Location = new System.Drawing.Point(930, 270);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(149, 28);
+            this.btnActualizar.TabIndex = 9;
+            this.btnActualizar.Text = "Actualizar datos";
+            this.btnActualizar.UseVisualStyleBackColor = true;
             // 
             // Form3
             // 
@@ -257,17 +334,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(75)))), ((int)(((byte)(196)))));
             this.ClientSize = new System.Drawing.Size(1122, 573);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.dgvPlanilla);
+            this.Controls.Add(this.btnRegresar);
+            this.Controls.Add(this.btnAgregar);
+            this.Controls.Add(this.btnLimpiar);
+            this.Controls.Add(this.btnMostrar);
+            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.btnActualizar);
+            this.Controls.Add(this.txtVentas);
+            this.Controls.Add(this.txtSalario);
+            this.Controls.Add(this.txtCargo);
+            this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -275,11 +352,10 @@
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form3";
-            this.Text = "Form3";
-            this.Load += new System.EventHandler(this.Form3_Load);
+            this.Text = "Gerencia de ventas";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPlanilla)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -295,16 +371,27 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtCargo;
+        private System.Windows.Forms.TextBox txtVentas;
+        private System.Windows.Forms.TextBox txtSalario;
+        private System.Windows.Forms.Button btnActualizar;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnMostrar;
+        private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.Button btnRegresar;
+        private System.Windows.Forms.DataGridView dgvPlanilla;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cargo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SalarioBase;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Ventas;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BonoVenta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Renta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SeguroPensionesEmpleado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SeguroPensionesEmpleador;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SeguroSocial;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SalarioNeto;
     }
 }
