@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Clave3_Grupo6
 {
-    public partial class Form4 : Form
+    public partial class formAdministracion : Form
     {
-        public Form4()
+        public formAdministracion()
         {
             InitializeComponent();
         }

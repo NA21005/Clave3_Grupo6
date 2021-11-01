@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Clave3_Grupo6
 {
-    public partial class Form5 : Form
+    public partial class formTransporte : Form
     {
-        public Form5()
+        public formTransporte()
         {
             InitializeComponent();
         }

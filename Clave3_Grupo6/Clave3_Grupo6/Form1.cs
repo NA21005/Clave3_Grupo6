@@ -19,7 +19,7 @@ namespace Clave3_Grupo6
             this.ttMensaje.SetToolTip(this.txtContraseña, "Ingrese su contraseña");
         }
 
-        private void btnInicioSesion_Click(object sender, EventArgs e)
+        public void btnInicioSesion_Click(object sender, EventArgs e)
         {
             //Declaracion de variables
             Form Formulario1 = new formIniciarSesion();
@@ -36,6 +36,7 @@ namespace Clave3_Grupo6
                 {
                     Formulario1.Close();
                     Formulario2.Show();
+                    
                 }
                 else
                 {
@@ -51,6 +52,11 @@ namespace Clave3_Grupo6
         private void btnSalir_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
