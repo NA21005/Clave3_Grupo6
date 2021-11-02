@@ -16,5 +16,13 @@ namespace Clave3_Grupo6
         {
             InitializeComponent();
         }
+
+        private void BtnRegresar_Click(object sender, EventArgs e)
+        {
+            Form formularioGerencia = new formGerencia();
+
+            formularioGerencia.Show();
+            this.Hide();
+        }
     }
 }

@@ -15,28 +15,26 @@ namespace Clave3_Grupo6
         public formIniciarSesion()
         {
             InitializeComponent();
-            this.ttMensaje.SetToolTip(this.txtUsuario, "Ingrese su nombre de usuario");
-            this.ttMensaje.SetToolTip(this.txtContraseña, "Ingrese su contraseña");
+            this.TtMensaje.SetToolTip(this.TxtUsuario, "Ingrese su nombre de usuario");
+            this.TtMensaje.SetToolTip(this.TxtContraseña, "Ingrese su contraseña");
         }
 
-        public void btnInicioSesion_Click(object sender, EventArgs e)
+        private void BtnInicioSesion_Click(object sender, EventArgs e)
         {
             //Declaracion de variables
-            Form Formulario1 = new formIniciarSesion();
-            Form Formulario2 = new formGerencia();
-            string Cuenta, Contra;
+            Form formularioGerencia = new formGerencia();
+            string cuenta, contra;
 
-            Cuenta = Convert.ToString(txtUsuario.Text);
-            Contra = Convert.ToString(txtContraseña.Text);
+            cuenta = Convert.ToString(TxtUsuario.Text);
+            contra = Convert.ToString(TxtContraseña.Text);
 
             // Validar si el usuario y contraseña son Correctos
-            if (Cuenta == "prn115")
+            if (cuenta == "prn115")
             {
-                if (Contra == "prn115")
+                if (contra == "prn115")
                 {
-                    Formulario1.Close();
-                    Formulario2.Show();
-                    
+                    formularioGerencia.Show();
+                    this.Hide();
                 }
                 else
                 {
@@ -49,14 +47,9 @@ namespace Clave3_Grupo6
             }
         }
 
-        private void btnSalir_Click(object sender, EventArgs e)
+        private void BtnSalir_Click(object sender, EventArgs e)
         {
             Close();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -12,49 +12,34 @@ namespace Clave3_Grupo6
 {
     public partial class formGerencia : Form
     {
-       
-
         public formGerencia()
         {
-            InitializeComponent();
-        
+            InitializeComponent();        
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void BtnAdministracion_Click(object sender, EventArgs e)
         {
+            Form formularioAdministracion = new formAdministracion();
 
+            formularioAdministracion.Show();
+            this.Hide();
         }
 
-        private void btnAdministracion_Click(object sender, EventArgs e)
+        private void BtnVentas_Click(object sender, EventArgs e)
         {
-            Form Formulario4 = new formAdministracion();
-            Form Formulario2 = new formGerencia();
+            Form formularioVentas = new formVentas();
 
-            Formulario2.Close();
-            Formulario4.Show();
-
+            formularioVentas.Show();
+            this.Hide();
         }
 
-        private void btnVentas_Click(object sender, EventArgs e)
+        private void BtnTransporte_Click(object sender, EventArgs e)
         {
+            Form formularioTransporte = new formTransporte();
 
+            formularioTransporte.Show();
+            this.Hide();
 
-            Form Formulario3 = new formVentas();
-            Form Formulario2 = new formGerencia();
-
-            Formulario2.Close();
-            Formulario3.Show();
-        }
-
-        private void btnTransporte_Click(object sender, EventArgs e)
-        {
-
-
-            Form Formulario5 = new formTransporte();
-            Form Formulario2 = new formGerencia();
-
-            Formulario2.Close();
-            Formulario5.Show();
         }
     }
 }
