@@ -24,5 +24,25 @@ namespace Clave3_Grupo6
             formularioGerencia.Show();
             this.Hide();
         }
+
+        private void formAdministracion_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnLimpiar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnEliminar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnSalir_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

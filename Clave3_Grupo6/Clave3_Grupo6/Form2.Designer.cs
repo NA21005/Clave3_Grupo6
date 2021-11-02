@@ -39,10 +39,9 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(96)))), ((int)(((byte)(138)))));
             this.label1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(68, 11);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(51, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(256, 31);
+            this.label1.Size = new System.Drawing.Size(193, 23);
             this.label1.TabIndex = 1;
             this.label1.Text = "Seleccione la gerencia";
             // 
@@ -51,10 +50,9 @@
             this.BtnVentas.BackColor = System.Drawing.Color.White;
             this.BtnVentas.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnVentas.ForeColor = System.Drawing.Color.Black;
-            this.BtnVentas.Location = new System.Drawing.Point(113, 135);
-            this.BtnVentas.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnVentas.Location = new System.Drawing.Point(85, 110);
             this.BtnVentas.Name = "BtnVentas";
-            this.BtnVentas.Size = new System.Drawing.Size(159, 34);
+            this.BtnVentas.Size = new System.Drawing.Size(119, 28);
             this.BtnVentas.TabIndex = 2;
             this.BtnVentas.Text = "Ventas";
             this.BtnVentas.UseVisualStyleBackColor = false;
@@ -65,10 +63,9 @@
             this.BtnAdministracion.BackColor = System.Drawing.Color.White;
             this.BtnAdministracion.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAdministracion.ForeColor = System.Drawing.Color.Black;
-            this.BtnAdministracion.Location = new System.Drawing.Point(113, 68);
-            this.BtnAdministracion.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnAdministracion.Location = new System.Drawing.Point(85, 55);
             this.BtnAdministracion.Name = "BtnAdministracion";
-            this.BtnAdministracion.Size = new System.Drawing.Size(159, 34);
+            this.BtnAdministracion.Size = new System.Drawing.Size(119, 28);
             this.BtnAdministracion.TabIndex = 3;
             this.BtnAdministracion.Text = "Administracion";
             this.BtnAdministracion.UseVisualStyleBackColor = false;
@@ -79,10 +76,9 @@
             this.BtnTransporte.BackColor = System.Drawing.Color.White;
             this.BtnTransporte.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnTransporte.ForeColor = System.Drawing.Color.Black;
-            this.BtnTransporte.Location = new System.Drawing.Point(113, 203);
-            this.BtnTransporte.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnTransporte.Location = new System.Drawing.Point(85, 165);
             this.BtnTransporte.Name = "BtnTransporte";
-            this.BtnTransporte.Size = new System.Drawing.Size(159, 34);
+            this.BtnTransporte.Size = new System.Drawing.Size(119, 28);
             this.BtnTransporte.TabIndex = 4;
             this.BtnTransporte.Text = "Transporte";
             this.BtnTransporte.UseVisualStyleBackColor = false;
@@ -90,18 +86,18 @@
             // 
             // formGerencia
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(75)))), ((int)(((byte)(196)))));
-            this.ClientSize = new System.Drawing.Size(379, 278);
+            this.ClientSize = new System.Drawing.Size(284, 226);
             this.Controls.Add(this.BtnTransporte);
             this.Controls.Add(this.BtnAdministracion);
             this.Controls.Add(this.BtnVentas);
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.Color.Cornsilk;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "formGerencia";
-            this.Text = "Form2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Seleccion de gerencias";
             this.ResumeLayout(false);
             this.PerformLayout();
 
