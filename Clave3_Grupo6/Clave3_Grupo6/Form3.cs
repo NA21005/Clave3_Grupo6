@@ -22,6 +22,7 @@ namespace Clave3_Grupo6
             Form formularioGerencia = new formGerencia();
 
             formularioGerencia.Show();
+            this.Close();
             this.Hide();
         }
 
