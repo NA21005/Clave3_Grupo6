@@ -59,6 +59,8 @@
             this.BtnEliminar = new System.Windows.Forms.Button();
             this.BtnActualizar = new System.Windows.Forms.Button();
             this.BtnSalir = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvPlanilla)).BeginInit();
             this.SuspendLayout();
@@ -111,7 +113,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(40, 123);
+            this.label4.Location = new System.Drawing.Point(40, 120);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(96, 27);
             this.label4.TabIndex = 1;
@@ -122,7 +124,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(40, 182);
+            this.label5.Location = new System.Drawing.Point(40, 180);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(76, 27);
             this.label5.TabIndex = 2;
@@ -133,7 +135,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(451, 182);
+            this.label6.Location = new System.Drawing.Point(480, 180);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(81, 27);
             this.label6.TabIndex = 3;
@@ -144,7 +146,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(451, 121);
+            this.label7.Location = new System.Drawing.Point(480, 120);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(84, 27);
             this.label7.TabIndex = 4;
@@ -153,7 +155,7 @@
             // TxtNombre
             // 
             this.TxtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtNombre.Location = new System.Drawing.Point(160, 121);
+            this.TxtNombre.Location = new System.Drawing.Point(200, 120);
             this.TxtNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtNombre.Name = "TxtNombre";
             this.TxtNombre.Size = new System.Drawing.Size(200, 27);
@@ -162,7 +164,7 @@
             // TxtCargo
             // 
             this.TxtCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtCargo.Location = new System.Drawing.Point(160, 180);
+            this.TxtCargo.Location = new System.Drawing.Point(200, 180);
             this.TxtCargo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtCargo.Name = "TxtCargo";
             this.TxtCargo.Size = new System.Drawing.Size(200, 27);
@@ -171,7 +173,7 @@
             // TxtVentas
             // 
             this.TxtVentas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtVentas.Location = new System.Drawing.Point(560, 180);
+            this.TxtVentas.Location = new System.Drawing.Point(600, 180);
             this.TxtVentas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtVentas.Name = "TxtVentas";
             this.TxtVentas.Size = new System.Drawing.Size(200, 27);
@@ -180,7 +182,7 @@
             // TxtSalario
             // 
             this.TxtSalario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtSalario.Location = new System.Drawing.Point(560, 121);
+            this.TxtSalario.Location = new System.Drawing.Point(600, 120);
             this.TxtSalario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtSalario.Name = "TxtSalario";
             this.TxtSalario.Size = new System.Drawing.Size(200, 27);
@@ -201,7 +203,7 @@
             this.SeguroPensionesEmpleador,
             this.SeguroSocial,
             this.SalarioNeto});
-            this.DgvPlanilla.Location = new System.Drawing.Point(45, 235);
+            this.DgvPlanilla.Location = new System.Drawing.Point(45, 310);
             this.DgvPlanilla.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DgvPlanilla.Name = "DgvPlanilla";
             this.DgvPlanilla.RowTemplate.Height = 24;
@@ -337,7 +339,7 @@
             this.BtnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSalir.Image = global::Clave3_Grupo6.Properties.Resources.btn;
             this.BtnSalir.Location = new System.Drawing.Point(931, 510);
-            this.BtnSalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnSalir.Margin = new System.Windows.Forms.Padding(4);
             this.BtnSalir.Name = "BtnSalir";
             this.BtnSalir.Size = new System.Drawing.Size(149, 28);
             this.BtnSalir.TabIndex = 33;
@@ -345,12 +347,34 @@
             this.BtnSalir.UseVisualStyleBackColor = false;
             this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(200, 240);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(200, 27);
+            this.textBox1.TabIndex = 35;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(40, 240);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(130, 27);
+            this.label8.TabIndex = 34;
+            this.label8.Text = "Horas extra:";
+            // 
             // formVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(75)))), ((int)(((byte)(196)))));
-            this.ClientSize = new System.Drawing.Size(1123, 574);
+            this.ClientSize = new System.Drawing.Size(1123, 653);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.BtnSalir);
             this.Controls.Add(this.DgvPlanilla);
             this.Controls.Add(this.BtnRegresar);
@@ -414,5 +438,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn SeguroSocial;
         private System.Windows.Forms.DataGridViewTextBoxColumn SalarioNeto;
         private System.Windows.Forms.Button BtnSalir;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label8;
     }
 }
