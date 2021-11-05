@@ -12,12 +12,15 @@ namespace Clave3_Grupo6
 {
     public partial class formVentas : Form
     {
+
+        Calcular op = new Calcular();
+
         public formVentas()
         {
             InitializeComponent();
         }
 
-        string prp;
+       
 
         private void BtnRegresar_Click(object sender, EventArgs e)
         {
@@ -35,14 +38,13 @@ namespace Clave3_Grupo6
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
             //Declaracion de variables
-            const int limite = 1;
             const double renta = 0.10;
             double bono =0;
             int id =0 ;
             const double pensionEmpleado = 0.0725;
             const double pensionEmpleador = 0.0775;
             const double descuentoSeguro = 0.03;
-            double resultadoRenta, resultadoBono, resultadoPensionEmpleado, resultadoPensionEmpleador, resultadoSeguro, total;
+            double resultadoRenta,asignacionBono, resultadoBono, resultadoPensionEmpleado, resultadoPensionEmpleador, resultadoSeguro, total;
 
 
             //Conversion de valores
@@ -51,50 +53,50 @@ namespace Clave3_Grupo6
             double salarioBase = Convert.ToDouble(TxtSalario.Text);
             double ventas = Convert.ToDouble(TxtVentas.Text);
 
-            for (int i = 0; i < limite; i++)
-            {
-                if (ventas > 25)
-                {
-                    if (ventas > 50)
-                    {
-                        if (ventas > 100)
-                        {
-                            bono = 0.20;
-                        }
-                    }
-                    else
-                    {
-                        bono = 0.15;
-                    }
-                }
-                else
-                {
-                    bono = 0.10;
-                }
-                id++;
-            }
-            //Calculos matematicos
+            //[-----asignar valores a los parametros-----]
+            op.descuentodeRenta = renta;
+            op.salarioNormal = salarioBase;
+            op.descuentoPensionEmpleado = pensionEmpleado;
+            op.descuentoPensionEmpleador = pensionEmpleador;
+            op.descuentoSeguro = descuentoSeguro;
+            op.sumaBono = bono;
+            op.bonoDeterminado = bono;
+            op.venta = ventas;
 
-            resultadoRenta = renta * salarioBase;
+            //[-----Asignar una variable a los metodos-----]
+            //Metodo para calcular el bono
+            asignacionBono = op.determinarBono(op.bonoDeterminado, op.venta);
 
-            resultadoPensionEmpleado = pensionEmpleado * salarioBase;
+            //metodo para calcular la renta
+            resultadoRenta = op.calculoRenta(op.descuentodeRenta,op.salarioNormal);
 
-            resultadoPensionEmpleador = pensionEmpleador * salarioBase;
+            //metodo para calcular el descuento de la pension a pagar del empleado 
+            resultadoPensionEmpleado = op.calculoPensionEmpleado(op.descuentoPensionEmpleado, op.salarioNormal);
 
-            resultadoSeguro = descuentoSeguro * salarioBase;
+            //metodo para calcular el descuento de la pension a pagar del empleador
+            resultadoPensionEmpleador = op.calculoPensionEmpleador(op.descuentoPensionEmpleador, op.salarioNormal);
 
-            resultadoBono = bono * ventas;
+            //metodo para calcular el descuento del seguro
+            resultadoSeguro = op.calculoSeguro(op.descuentoSeguro, op.salarioNormal);
 
-            total = salarioBase - resultadoRenta - resultadoPensionEmpleado - resultadoSeguro + resultadoBono;
-           
+            //metodo para calcular el bono
+            resultadoBono = op.calculoBono(asignacionBono, op.salarioNormal);
+
+            total = op.salarioNormal - resultadoRenta - resultadoPensionEmpleado - resultadoSeguro + resultadoBono;
 
             //Agregar elementos dentro del dgv
             DgvPlanilla.Rows.Add(id, nombre, cargo, salarioBase, ventas, resultadoBono, resultadoRenta, resultadoPensionEmpleado, resultadoPensionEmpleador, resultadoSeguro, total);
+
         }
 
         private void formVentas_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void BtnMostrar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
