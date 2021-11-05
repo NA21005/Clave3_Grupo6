@@ -52,7 +52,7 @@
             this.BtnVentas.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnVentas.ForeColor = System.Drawing.Color.Black;
             this.BtnVentas.Location = new System.Drawing.Point(113, 135);
-            this.BtnVentas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnVentas.Margin = new System.Windows.Forms.Padding(4);
             this.BtnVentas.Name = "BtnVentas";
             this.BtnVentas.Size = new System.Drawing.Size(159, 34);
             this.BtnVentas.TabIndex = 2;
@@ -66,7 +66,7 @@
             this.BtnAdministracion.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAdministracion.ForeColor = System.Drawing.Color.Black;
             this.BtnAdministracion.Location = new System.Drawing.Point(113, 68);
-            this.BtnAdministracion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnAdministracion.Margin = new System.Windows.Forms.Padding(4);
             this.BtnAdministracion.Name = "BtnAdministracion";
             this.BtnAdministracion.Size = new System.Drawing.Size(159, 34);
             this.BtnAdministracion.TabIndex = 3;
@@ -80,7 +80,7 @@
             this.BtnTransporte.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnTransporte.ForeColor = System.Drawing.Color.Black;
             this.BtnTransporte.Location = new System.Drawing.Point(113, 203);
-            this.BtnTransporte.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnTransporte.Margin = new System.Windows.Forms.Padding(4);
             this.BtnTransporte.Name = "BtnTransporte";
             this.BtnTransporte.Size = new System.Drawing.Size(159, 34);
             this.BtnTransporte.TabIndex = 4;
@@ -99,10 +99,11 @@
             this.Controls.Add(this.BtnVentas);
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.Color.Cornsilk;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "formGerencia";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Selección de gerencias";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.formGerencia_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

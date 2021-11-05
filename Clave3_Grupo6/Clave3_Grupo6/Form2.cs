@@ -22,7 +22,6 @@ namespace Clave3_Grupo6
             Form formularioAdministracion = new formAdministracion();
 
             formularioAdministracion.Show();
-            this.Close();
             this.Hide();
         }
 
@@ -31,7 +30,6 @@ namespace Clave3_Grupo6
             Form formularioVentas = new formVentas();
 
             formularioVentas.Show();
-            this.Close();
             this.Hide();
         }
 
@@ -40,8 +38,12 @@ namespace Clave3_Grupo6
             Form formularioTransporte = new formTransporte();
 
             formularioTransporte.Show();
-            this.Close();
             this.Hide();
+        }
+
+        private void formGerencia_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

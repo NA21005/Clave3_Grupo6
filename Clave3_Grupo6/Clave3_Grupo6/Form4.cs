@@ -22,7 +22,6 @@ namespace Clave3_Grupo6
             Form formularioGerencia = new formGerencia();
 
             formularioGerencia.Show();
-            this.Close();
             this.Hide();
         }
 
@@ -44,6 +43,11 @@ namespace Clave3_Grupo6
         private void BtnSalir_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void formAdministracion_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

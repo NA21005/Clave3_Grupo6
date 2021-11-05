@@ -24,7 +24,6 @@ namespace Clave3_Grupo6
             Form formularioGerencia = new formGerencia();
 
             formularioGerencia.Show();
-            this.Close();
             this.Hide();
         }
 
@@ -93,5 +92,9 @@ namespace Clave3_Grupo6
             DgvPlanilla.Rows.Add(id, nombre, cargo, salarioBase, ventas, resultadoBono, resultadoRenta, resultadoPensionEmpleado, resultadoPensionEmpleador, resultadoSeguro, total);
         }
 
+        private void formVentas_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
