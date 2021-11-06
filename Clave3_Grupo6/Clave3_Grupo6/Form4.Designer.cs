@@ -55,6 +55,8 @@
             this.BtnEliminar = new System.Windows.Forms.Button();
             this.BtnActualizar = new System.Windows.Forms.Button();
             this.BtnSalir = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DgvPlanilla)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -127,7 +129,7 @@
             // TxtSalario
             // 
             this.TxtSalario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtSalario.Location = new System.Drawing.Point(557, 122);
+            this.TxtSalario.Location = new System.Drawing.Point(580, 122);
             this.TxtSalario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtSalario.Name = "TxtSalario";
             this.TxtSalario.Size = new System.Drawing.Size(200, 27);
@@ -156,7 +158,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(448, 122);
+            this.label7.Location = new System.Drawing.Point(420, 122);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(84, 27);
             this.label7.TabIndex = 20;
@@ -302,7 +304,7 @@
             this.BtnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSalir.Image = global::Clave3_Grupo6.Properties.Resources.btn;
             this.BtnSalir.Location = new System.Drawing.Point(927, 510);
-            this.BtnSalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnSalir.Margin = new System.Windows.Forms.Padding(4);
             this.BtnSalir.Name = "BtnSalir";
             this.BtnSalir.Size = new System.Drawing.Size(149, 28);
             this.BtnSalir.TabIndex = 32;
@@ -310,12 +312,34 @@
             this.BtnSalir.UseVisualStyleBackColor = false;
             this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(580, 181);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(200, 27);
+            this.textBox1.TabIndex = 34;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(420, 183);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(130, 27);
+            this.label6.TabIndex = 33;
+            this.label6.Text = "Horas extra:";
+            // 
             // formAdministracion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(75)))), ((int)(((byte)(196)))));
             this.ClientSize = new System.Drawing.Size(1123, 574);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.BtnSalir);
             this.Controls.Add(this.DgvPlanilla);
             this.Controls.Add(this.BtnRegresar);
@@ -374,5 +398,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn SeguroSocial;
         private System.Windows.Forms.DataGridViewTextBoxColumn SalarioNeto;
         private System.Windows.Forms.Button BtnSalir;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label6;
     }
 }
