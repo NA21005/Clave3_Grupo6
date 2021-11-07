@@ -321,6 +321,7 @@
             this.BtnEliminar.TabIndex = 10;
             this.BtnEliminar.Text = "Eliminar empleado";
             this.BtnEliminar.UseVisualStyleBackColor = true;
+            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
             // BtnActualizar
             // 
@@ -332,6 +333,7 @@
             this.BtnActualizar.TabIndex = 9;
             this.BtnActualizar.Text = "Actualizar datos";
             this.BtnActualizar.UseVisualStyleBackColor = true;
+            this.BtnActualizar.Click += new System.EventHandler(this.BtnActualizar_Click);
             // 
             // BtnSalir
             // 
