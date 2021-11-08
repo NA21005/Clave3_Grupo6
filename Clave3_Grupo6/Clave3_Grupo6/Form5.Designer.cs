@@ -33,6 +33,8 @@
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cargo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SalarioBase = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HorasExtra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BonoHorasExtra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Renta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SeguroPensionesEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SeguroPensionesEmpleador = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,7 +57,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.BtnSalir = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtHorasExtra = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DgvPlanilla)).BeginInit();
             this.panel1.SuspendLayout();
@@ -69,6 +71,8 @@
             this.Nombre,
             this.Cargo,
             this.SalarioBase,
+            this.HorasExtra,
+            this.BonoHorasExtra,
             this.Renta,
             this.SeguroPensionesEmpleado,
             this.SeguroPensionesEmpleador,
@@ -100,6 +104,16 @@
             // 
             this.SalarioBase.HeaderText = "Salario Base";
             this.SalarioBase.Name = "SalarioBase";
+            // 
+            // HorasExtra
+            // 
+            this.HorasExtra.HeaderText = "Horas extra";
+            this.HorasExtra.Name = "HorasExtra";
+            // 
+            // BonoHorasExtra
+            // 
+            this.BonoHorasExtra.HeaderText = "Bono horas extra";
+            this.BonoHorasExtra.Name = "BonoHorasExtra";
             // 
             // Renta
             // 
@@ -148,6 +162,7 @@
             this.BtnAgregar.TabIndex = 29;
             this.BtnAgregar.Text = "Agregar empleado";
             this.BtnAgregar.UseVisualStyleBackColor = true;
+            this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
             // BtnLimpiar
             // 
@@ -181,6 +196,7 @@
             this.BtnEliminar.TabIndex = 26;
             this.BtnEliminar.Text = "Eliminar empleado";
             this.BtnEliminar.UseVisualStyleBackColor = true;
+            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
             // BtnActualizar
             // 
@@ -310,14 +326,14 @@
             this.BtnSalir.UseVisualStyleBackColor = false;
             this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
-            // textBox1
+            // txtHorasExtra
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(580, 180);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 27);
-            this.textBox1.TabIndex = 35;
+            this.txtHorasExtra.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHorasExtra.Location = new System.Drawing.Point(580, 180);
+            this.txtHorasExtra.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtHorasExtra.Name = "txtHorasExtra";
+            this.txtHorasExtra.Size = new System.Drawing.Size(200, 27);
+            this.txtHorasExtra.TabIndex = 35;
             // 
             // label6
             // 
@@ -336,7 +352,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(75)))), ((int)(((byte)(196)))));
             this.ClientSize = new System.Drawing.Size(1123, 574);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtHorasExtra);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.BtnSalir);
             this.Controls.Add(this.DgvPlanilla);
@@ -386,17 +402,19 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button BtnSalir;
+        private System.Windows.Forms.TextBox txtHorasExtra;
+        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cargo;
         private System.Windows.Forms.DataGridViewTextBoxColumn SalarioBase;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HorasExtra;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BonoHorasExtra;
         private System.Windows.Forms.DataGridViewTextBoxColumn Renta;
         private System.Windows.Forms.DataGridViewTextBoxColumn SeguroPensionesEmpleado;
         private System.Windows.Forms.DataGridViewTextBoxColumn SeguroPensionesEmpleador;
         private System.Windows.Forms.DataGridViewTextBoxColumn SeguroSocial;
         private System.Windows.Forms.DataGridViewTextBoxColumn SalarioNeto;
-        private System.Windows.Forms.Button BtnSalir;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label6;
     }
 }

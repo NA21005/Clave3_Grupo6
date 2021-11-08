@@ -41,17 +41,6 @@
             this.TxtVentas = new System.Windows.Forms.TextBox();
             this.TxtSalario = new System.Windows.Forms.TextBox();
             this.DgvPlanilla = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cargo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SalarioBase = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ventas = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BonoVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Renta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SeguroPensionesEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SeguroPensionesEmpleador = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SeguroSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SalarioNeto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BtnRegresar = new System.Windows.Forms.Button();
             this.BtnAgregar = new System.Windows.Forms.Button();
             this.BtnLimpiar = new System.Windows.Forms.Button();
@@ -59,8 +48,21 @@
             this.BtnEliminar = new System.Windows.Forms.Button();
             this.BtnActualizar = new System.Windows.Forms.Button();
             this.BtnSalir = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtHorasExtra = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cargo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SalarioBase = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ventas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BonoVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HorasExtra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BonoHorasExtra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Renta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SeguroPensionesEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SeguroPensionesEmpleador = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SeguroSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SalarioNeto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvPlanilla)).BeginInit();
             this.SuspendLayout();
@@ -198,6 +200,8 @@
             this.SalarioBase,
             this.Ventas,
             this.BonoVenta,
+            this.HorasExtra,
+            this.BonoHorasExtra,
             this.Renta,
             this.SeguroPensionesEmpleado,
             this.SeguroPensionesEmpleador,
@@ -209,61 +213,6 @@
             this.DgvPlanilla.RowTemplate.Height = 24;
             this.DgvPlanilla.Size = new System.Drawing.Size(840, 306);
             this.DgvPlanilla.TabIndex = 15;
-            // 
-            // id
-            // 
-            this.id.HeaderText = "Id";
-            this.id.Name = "id";
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            // 
-            // Cargo
-            // 
-            this.Cargo.HeaderText = "Cargo";
-            this.Cargo.Name = "Cargo";
-            // 
-            // SalarioBase
-            // 
-            this.SalarioBase.HeaderText = "Salario Base";
-            this.SalarioBase.Name = "SalarioBase";
-            // 
-            // Ventas
-            // 
-            this.Ventas.HeaderText = "Ventas";
-            this.Ventas.Name = "Ventas";
-            // 
-            // BonoVenta
-            // 
-            this.BonoVenta.HeaderText = "Bono por venta";
-            this.BonoVenta.Name = "BonoVenta";
-            // 
-            // Renta
-            // 
-            this.Renta.HeaderText = "Renta";
-            this.Renta.Name = "Renta";
-            // 
-            // SeguroPensionesEmpleado
-            // 
-            this.SeguroPensionesEmpleado.HeaderText = "Seguro de pensiones (empleado)";
-            this.SeguroPensionesEmpleado.Name = "SeguroPensionesEmpleado";
-            // 
-            // SeguroPensionesEmpleador
-            // 
-            this.SeguroPensionesEmpleador.HeaderText = "Seguro de pensiones (empleador)";
-            this.SeguroPensionesEmpleador.Name = "SeguroPensionesEmpleador";
-            // 
-            // SeguroSocial
-            // 
-            this.SeguroSocial.HeaderText = "Seguro social";
-            this.SeguroSocial.Name = "SeguroSocial";
-            // 
-            // SalarioNeto
-            // 
-            this.SalarioNeto.HeaderText = "Salario neto";
-            this.SalarioNeto.Name = "SalarioNeto";
             // 
             // BtnRegresar
             // 
@@ -349,14 +298,14 @@
             this.BtnSalir.UseVisualStyleBackColor = false;
             this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
-            // textBox1
+            // txtHorasExtra
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(200, 240);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 27);
-            this.textBox1.TabIndex = 35;
+            this.txtHorasExtra.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHorasExtra.Location = new System.Drawing.Point(200, 240);
+            this.txtHorasExtra.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtHorasExtra.Name = "txtHorasExtra";
+            this.txtHorasExtra.Size = new System.Drawing.Size(200, 27);
+            this.txtHorasExtra.TabIndex = 35;
             // 
             // label8
             // 
@@ -369,13 +318,78 @@
             this.label8.TabIndex = 34;
             this.label8.Text = "Horas extra:";
             // 
+            // id
+            // 
+            this.id.HeaderText = "Id";
+            this.id.Name = "id";
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            // 
+            // Cargo
+            // 
+            this.Cargo.HeaderText = "Cargo";
+            this.Cargo.Name = "Cargo";
+            // 
+            // SalarioBase
+            // 
+            this.SalarioBase.HeaderText = "Salario Base";
+            this.SalarioBase.Name = "SalarioBase";
+            // 
+            // Ventas
+            // 
+            this.Ventas.HeaderText = "Ventas";
+            this.Ventas.Name = "Ventas";
+            // 
+            // BonoVenta
+            // 
+            this.BonoVenta.HeaderText = "Bono por venta";
+            this.BonoVenta.Name = "BonoVenta";
+            // 
+            // HorasExtra
+            // 
+            this.HorasExtra.HeaderText = "Horas extra";
+            this.HorasExtra.Name = "HorasExtra";
+            // 
+            // BonoHorasExtra
+            // 
+            this.BonoHorasExtra.HeaderText = "Bono horas extra";
+            this.BonoHorasExtra.Name = "BonoHorasExtra";
+            // 
+            // Renta
+            // 
+            this.Renta.HeaderText = "Renta";
+            this.Renta.Name = "Renta";
+            // 
+            // SeguroPensionesEmpleado
+            // 
+            this.SeguroPensionesEmpleado.HeaderText = "Seguro de pensiones (empleado)";
+            this.SeguroPensionesEmpleado.Name = "SeguroPensionesEmpleado";
+            // 
+            // SeguroPensionesEmpleador
+            // 
+            this.SeguroPensionesEmpleador.HeaderText = "Seguro de pensiones (empleador)";
+            this.SeguroPensionesEmpleador.Name = "SeguroPensionesEmpleador";
+            // 
+            // SeguroSocial
+            // 
+            this.SeguroSocial.HeaderText = "Seguro social";
+            this.SeguroSocial.Name = "SeguroSocial";
+            // 
+            // SalarioNeto
+            // 
+            this.SalarioNeto.HeaderText = "Salario neto";
+            this.SalarioNeto.Name = "SalarioNeto";
+            // 
             // formVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(75)))), ((int)(((byte)(196)))));
             this.ClientSize = new System.Drawing.Size(1123, 653);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtHorasExtra);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.BtnSalir);
             this.Controls.Add(this.DgvPlanilla);
@@ -428,19 +442,21 @@
         private System.Windows.Forms.Button BtnAgregar;
         private System.Windows.Forms.Button BtnRegresar;
         private System.Windows.Forms.DataGridView DgvPlanilla;
+        private System.Windows.Forms.Button BtnSalir;
+        private System.Windows.Forms.TextBox txtHorasExtra;
+        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cargo;
         private System.Windows.Forms.DataGridViewTextBoxColumn SalarioBase;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ventas;
         private System.Windows.Forms.DataGridViewTextBoxColumn BonoVenta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HorasExtra;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BonoHorasExtra;
         private System.Windows.Forms.DataGridViewTextBoxColumn Renta;
         private System.Windows.Forms.DataGridViewTextBoxColumn SeguroPensionesEmpleado;
         private System.Windows.Forms.DataGridViewTextBoxColumn SeguroPensionesEmpleador;
         private System.Windows.Forms.DataGridViewTextBoxColumn SeguroSocial;
         private System.Windows.Forms.DataGridViewTextBoxColumn SalarioNeto;
-        private System.Windows.Forms.Button BtnSalir;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label8;
     }
 }
