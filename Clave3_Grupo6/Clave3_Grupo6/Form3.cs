@@ -105,10 +105,6 @@ namespace Clave3_Grupo6
             Application.Exit();
         }
 
-        private void BtnMostrar_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void BtnActualizar_Click(object sender, EventArgs e)
         {
@@ -257,6 +253,59 @@ namespace Clave3_Grupo6
             finally
             {
                 conexionBD.Close();
+            }
+        }
+
+        private void BtnMostrar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DgvPlanilla.Rows.Clear();
+
+                //Declarando variables
+                int id = 1, i;
+                string sql, nombre, cargo, salarioBase, renta, pensionEmpleado, pensionEmpleador, seguro, ventas, bonoVentas, bonoHorasExtra, horasExtra, salarioNeto;
+
+                //Abriendo conexión de base de datos
+                MySqlConnection conexionBD = CRUD.conexion();
+                conexionBD.Open();
+
+                sql = "SELECT COUNT(id) FROM gerencia_ventas";
+                MySqlCommand comando = new MySqlCommand(sql, conexionBD);
+                i = Convert.ToInt32(comando.ExecuteScalar());
+                conexionBD.Close();
+
+                while (id <= i)
+                {
+                    conexionBD.Open();
+                    //Recuperando campos de la base de datos
+                    sql = "SELECT salarioBase, renta, seguroPensionesEmpleado, seguroSocial, ventas, horasExtra, bonoVentas, bonoHorasExtra, seguroPensionesEmpleador, nombre, cargo, salarioNeto FROM gerencia_ventas WHERE id='" + id + "'";
+
+                    comando = new MySqlCommand(sql, conexionBD);
+                    MySqlDataReader reader = null;
+                    reader = comando.ExecuteReader();
+                    reader.Read();
+                    salarioBase = reader.GetString(0);
+                    renta = reader.GetString(1);
+                    pensionEmpleado = reader.GetString(2);
+                    seguro = reader.GetString(3);
+                    ventas = reader.GetString(4);
+                    horasExtra = reader.GetString(5);
+                    bonoVentas = reader.GetString(6);
+                    bonoHorasExtra = reader.GetString(7);
+                    pensionEmpleador = reader.GetString(8);
+                    nombre = reader.GetString(9);
+                    cargo = reader.GetString(10);
+                    salarioNeto = reader.GetString(11);
+
+                    DgvPlanilla.Rows.Add(id, nombre, cargo, salarioBase, ventas, bonoVentas, horasExtra, bonoHorasExtra, renta, pensionEmpleado, pensionEmpleador, seguro, salarioNeto);
+                    id++;
+                    conexionBD.Close();
+                }
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message);
             }
         }
     }

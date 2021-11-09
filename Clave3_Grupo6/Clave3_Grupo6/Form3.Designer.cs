@@ -41,15 +41,6 @@
             this.TxtVentas = new System.Windows.Forms.TextBox();
             this.TxtSalario = new System.Windows.Forms.TextBox();
             this.DgvPlanilla = new System.Windows.Forms.DataGridView();
-            this.BtnRegresar = new System.Windows.Forms.Button();
-            this.BtnAgregar = new System.Windows.Forms.Button();
-            this.BtnLimpiar = new System.Windows.Forms.Button();
-            this.BtnMostrar = new System.Windows.Forms.Button();
-            this.BtnEliminar = new System.Windows.Forms.Button();
-            this.BtnActualizar = new System.Windows.Forms.Button();
-            this.BtnSalir = new System.Windows.Forms.Button();
-            this.txtHorasExtra = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cargo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,6 +54,15 @@
             this.SeguroPensionesEmpleador = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SeguroSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SalarioNeto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BtnRegresar = new System.Windows.Forms.Button();
+            this.BtnAgregar = new System.Windows.Forms.Button();
+            this.BtnLimpiar = new System.Windows.Forms.Button();
+            this.BtnMostrar = new System.Windows.Forms.Button();
+            this.BtnEliminar = new System.Windows.Forms.Button();
+            this.BtnActualizar = new System.Windows.Forms.Button();
+            this.BtnSalir = new System.Windows.Forms.Button();
+            this.txtHorasExtra = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvPlanilla)).BeginInit();
             this.SuspendLayout();
@@ -214,110 +214,6 @@
             this.DgvPlanilla.Size = new System.Drawing.Size(840, 306);
             this.DgvPlanilla.TabIndex = 15;
             // 
-            // BtnRegresar
-            // 
-            this.BtnRegresar.Image = global::Clave3_Grupo6.Properties.Resources.btn;
-            this.BtnRegresar.Location = new System.Drawing.Point(931, 450);
-            this.BtnRegresar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.BtnRegresar.Name = "BtnRegresar";
-            this.BtnRegresar.Size = new System.Drawing.Size(149, 28);
-            this.BtnRegresar.TabIndex = 14;
-            this.BtnRegresar.Text = "Regresar";
-            this.BtnRegresar.UseVisualStyleBackColor = true;
-            this.BtnRegresar.Click += new System.EventHandler(this.BtnRegresar_Click);
-            // 
-            // BtnAgregar
-            // 
-            this.BtnAgregar.Image = global::Clave3_Grupo6.Properties.Resources.btn;
-            this.BtnAgregar.Location = new System.Drawing.Point(931, 150);
-            this.BtnAgregar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.BtnAgregar.Name = "BtnAgregar";
-            this.BtnAgregar.Size = new System.Drawing.Size(149, 28);
-            this.BtnAgregar.TabIndex = 13;
-            this.BtnAgregar.Text = "Agregar empleado";
-            this.BtnAgregar.UseVisualStyleBackColor = true;
-            this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
-            // 
-            // BtnLimpiar
-            // 
-            this.BtnLimpiar.Image = global::Clave3_Grupo6.Properties.Resources.btn;
-            this.BtnLimpiar.Location = new System.Drawing.Point(931, 390);
-            this.BtnLimpiar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.BtnLimpiar.Name = "BtnLimpiar";
-            this.BtnLimpiar.Size = new System.Drawing.Size(149, 28);
-            this.BtnLimpiar.TabIndex = 12;
-            this.BtnLimpiar.Text = "Limpiar campos";
-            this.BtnLimpiar.UseVisualStyleBackColor = true;
-            // 
-            // BtnMostrar
-            // 
-            this.BtnMostrar.Image = global::Clave3_Grupo6.Properties.Resources.btn;
-            this.BtnMostrar.Location = new System.Drawing.Point(931, 210);
-            this.BtnMostrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.BtnMostrar.Name = "BtnMostrar";
-            this.BtnMostrar.Size = new System.Drawing.Size(149, 28);
-            this.BtnMostrar.TabIndex = 11;
-            this.BtnMostrar.Text = "Mostrar planillas";
-            this.BtnMostrar.UseVisualStyleBackColor = true;
-            // 
-            // BtnEliminar
-            // 
-            this.BtnEliminar.Image = global::Clave3_Grupo6.Properties.Resources.btn;
-            this.BtnEliminar.Location = new System.Drawing.Point(931, 330);
-            this.BtnEliminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.BtnEliminar.Name = "BtnEliminar";
-            this.BtnEliminar.Size = new System.Drawing.Size(149, 28);
-            this.BtnEliminar.TabIndex = 10;
-            this.BtnEliminar.Text = "Eliminar empleado";
-            this.BtnEliminar.UseVisualStyleBackColor = true;
-            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
-            // 
-            // BtnActualizar
-            // 
-            this.BtnActualizar.Image = global::Clave3_Grupo6.Properties.Resources.btn;
-            this.BtnActualizar.Location = new System.Drawing.Point(931, 270);
-            this.BtnActualizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.BtnActualizar.Name = "BtnActualizar";
-            this.BtnActualizar.Size = new System.Drawing.Size(149, 28);
-            this.BtnActualizar.TabIndex = 9;
-            this.BtnActualizar.Text = "Actualizar datos";
-            this.BtnActualizar.UseVisualStyleBackColor = true;
-            this.BtnActualizar.Click += new System.EventHandler(this.BtnActualizar_Click);
-            // 
-            // BtnSalir
-            // 
-            this.BtnSalir.BackColor = System.Drawing.Color.White;
-            this.BtnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSalir.Image = global::Clave3_Grupo6.Properties.Resources.btn;
-            this.BtnSalir.Location = new System.Drawing.Point(931, 510);
-            this.BtnSalir.Margin = new System.Windows.Forms.Padding(4);
-            this.BtnSalir.Name = "BtnSalir";
-            this.BtnSalir.Size = new System.Drawing.Size(149, 28);
-            this.BtnSalir.TabIndex = 33;
-            this.BtnSalir.Text = "Salir";
-            this.BtnSalir.UseVisualStyleBackColor = false;
-            this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
-            // 
-            // txtHorasExtra
-            // 
-            this.txtHorasExtra.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHorasExtra.Location = new System.Drawing.Point(200, 240);
-            this.txtHorasExtra.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtHorasExtra.Name = "txtHorasExtra";
-            this.txtHorasExtra.Size = new System.Drawing.Size(200, 27);
-            this.txtHorasExtra.TabIndex = 35;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(40, 240);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(130, 27);
-            this.label8.TabIndex = 34;
-            this.label8.Text = "Horas extra:";
-            // 
             // id
             // 
             this.id.HeaderText = "Id";
@@ -382,6 +278,111 @@
             // 
             this.SalarioNeto.HeaderText = "Salario neto";
             this.SalarioNeto.Name = "SalarioNeto";
+            // 
+            // BtnRegresar
+            // 
+            this.BtnRegresar.Image = global::Clave3_Grupo6.Properties.Resources.btn;
+            this.BtnRegresar.Location = new System.Drawing.Point(931, 450);
+            this.BtnRegresar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnRegresar.Name = "BtnRegresar";
+            this.BtnRegresar.Size = new System.Drawing.Size(149, 28);
+            this.BtnRegresar.TabIndex = 14;
+            this.BtnRegresar.Text = "Regresar";
+            this.BtnRegresar.UseVisualStyleBackColor = true;
+            this.BtnRegresar.Click += new System.EventHandler(this.BtnRegresar_Click);
+            // 
+            // BtnAgregar
+            // 
+            this.BtnAgregar.Image = global::Clave3_Grupo6.Properties.Resources.btn;
+            this.BtnAgregar.Location = new System.Drawing.Point(931, 150);
+            this.BtnAgregar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnAgregar.Name = "BtnAgregar";
+            this.BtnAgregar.Size = new System.Drawing.Size(149, 28);
+            this.BtnAgregar.TabIndex = 13;
+            this.BtnAgregar.Text = "Agregar empleado";
+            this.BtnAgregar.UseVisualStyleBackColor = true;
+            this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
+            // 
+            // BtnLimpiar
+            // 
+            this.BtnLimpiar.Image = global::Clave3_Grupo6.Properties.Resources.btn;
+            this.BtnLimpiar.Location = new System.Drawing.Point(931, 390);
+            this.BtnLimpiar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnLimpiar.Name = "BtnLimpiar";
+            this.BtnLimpiar.Size = new System.Drawing.Size(149, 28);
+            this.BtnLimpiar.TabIndex = 12;
+            this.BtnLimpiar.Text = "Limpiar campos";
+            this.BtnLimpiar.UseVisualStyleBackColor = true;
+            // 
+            // BtnMostrar
+            // 
+            this.BtnMostrar.Image = global::Clave3_Grupo6.Properties.Resources.btn;
+            this.BtnMostrar.Location = new System.Drawing.Point(931, 210);
+            this.BtnMostrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnMostrar.Name = "BtnMostrar";
+            this.BtnMostrar.Size = new System.Drawing.Size(149, 28);
+            this.BtnMostrar.TabIndex = 11;
+            this.BtnMostrar.Text = "Mostrar planillas";
+            this.BtnMostrar.UseVisualStyleBackColor = true;
+            this.BtnMostrar.Click += new System.EventHandler(this.BtnMostrar_Click);
+            // 
+            // BtnEliminar
+            // 
+            this.BtnEliminar.Image = global::Clave3_Grupo6.Properties.Resources.btn;
+            this.BtnEliminar.Location = new System.Drawing.Point(931, 330);
+            this.BtnEliminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnEliminar.Name = "BtnEliminar";
+            this.BtnEliminar.Size = new System.Drawing.Size(149, 28);
+            this.BtnEliminar.TabIndex = 10;
+            this.BtnEliminar.Text = "Eliminar empleado";
+            this.BtnEliminar.UseVisualStyleBackColor = true;
+            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
+            // 
+            // BtnActualizar
+            // 
+            this.BtnActualizar.Image = global::Clave3_Grupo6.Properties.Resources.btn;
+            this.BtnActualizar.Location = new System.Drawing.Point(931, 270);
+            this.BtnActualizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnActualizar.Name = "BtnActualizar";
+            this.BtnActualizar.Size = new System.Drawing.Size(149, 28);
+            this.BtnActualizar.TabIndex = 9;
+            this.BtnActualizar.Text = "Actualizar datos";
+            this.BtnActualizar.UseVisualStyleBackColor = true;
+            this.BtnActualizar.Click += new System.EventHandler(this.BtnActualizar_Click);
+            // 
+            // BtnSalir
+            // 
+            this.BtnSalir.BackColor = System.Drawing.Color.White;
+            this.BtnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSalir.Image = global::Clave3_Grupo6.Properties.Resources.btn;
+            this.BtnSalir.Location = new System.Drawing.Point(931, 510);
+            this.BtnSalir.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnSalir.Name = "BtnSalir";
+            this.BtnSalir.Size = new System.Drawing.Size(149, 28);
+            this.BtnSalir.TabIndex = 33;
+            this.BtnSalir.Text = "Salir";
+            this.BtnSalir.UseVisualStyleBackColor = false;
+            this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
+            // 
+            // txtHorasExtra
+            // 
+            this.txtHorasExtra.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHorasExtra.Location = new System.Drawing.Point(200, 240);
+            this.txtHorasExtra.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtHorasExtra.Name = "txtHorasExtra";
+            this.txtHorasExtra.Size = new System.Drawing.Size(200, 27);
+            this.txtHorasExtra.TabIndex = 35;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(40, 240);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(130, 27);
+            this.label8.TabIndex = 34;
+            this.label8.Text = "Horas extra:";
             // 
             // formVentas
             // 
