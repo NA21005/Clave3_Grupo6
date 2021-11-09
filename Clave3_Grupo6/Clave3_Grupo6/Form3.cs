@@ -115,9 +115,10 @@ namespace Clave3_Grupo6
             try
             {
                 //Declaracion de variables
-                double resultadoRenta, resultadoBonoVentas, resultadoPensionEmpleado, resultadoPensionEmpleador, resultadoSeguro, salarioNeto, resultadoBonoHorasExtra, ventas, salarioBase;
+                double resultadoRenta, resultadoBonoVentas, resultadoPensionEmpleado, resultadoPensionEmpleador, resultadoSeguro, salarioNeto, resultadoBonoHorasExtra, ventas, salarioBase, bonoVentas, bonoHorasExtra, renta, pensionEmpleado, seguro;
                 string sql = "", nombre, cargo;
                 int horasExtra, id;
+
 
                 //Instanciando clase
                 Calcular calcular = new Calcular();
@@ -126,16 +127,33 @@ namespace Clave3_Grupo6
                 MySqlConnection conexionBD = CRUD.conexion();
                 conexionBD.Open();
 
+                //Capturando id del empleado
                 id = Convert.ToInt32(Microsoft.VisualBasic.Interaction.InputBox("Ingrese el id del empleado: "));
 
-                //Conversion de valores
+                //Recuperando campos de la base de datos
+                sql = "SELECT salarioBase, renta, seguroPensionesEmpleado, seguroSocial, ventas, horasExtra, bonoVentas, bonoHorasExtra FROM gerencia_ventas WHERE id='" + id + "'";
+                MySqlCommand comando = new MySqlCommand(sql, conexionBD);
+                MySqlDataReader reader = null;
+                reader = comando.ExecuteReader();
+                reader.Read();
+                salarioBase = Convert.ToDouble(reader.GetString(0));
+                renta = Convert.ToDouble(reader.GetString(1));
+                pensionEmpleado = Convert.ToDouble(reader.GetString(2));
+                seguro = Convert.ToDouble(reader.GetString(3));
+                ventas = Convert.ToDouble(reader.GetString(4));
+                horasExtra = Convert.ToInt32(reader.GetString(5));
+                bonoVentas = Convert.ToDouble(reader.GetString(6));
+                bonoHorasExtra = Convert.ToDouble(reader.GetString(7));
+                conexionBD.Close();
+                conexionBD.Open();
+
                 nombre = TxtNombre.Text;
                 if (nombre != string.Empty)
                 {
                     sql = "UPDATE gerencia_ventas SET nombre='" + nombre + "' WHERE id='" + id + "'";
 
                     //Guardando información en la base de datos
-                    MySqlCommand comando = new MySqlCommand(sql, conexionBD);
+                    comando = new MySqlCommand(sql, conexionBD);
                     comando.ExecuteNonQuery();
                 }
 
@@ -145,7 +163,7 @@ namespace Clave3_Grupo6
                     sql = "UPDATE gerencia_ventas SET cargo='" + cargo + "' WHERE id='" + id + "'";
 
                     //Guardando información en la base de datos
-                    MySqlCommand comando = new MySqlCommand(sql, conexionBD);
+                    comando = new MySqlCommand(sql, conexionBD);
                     comando.ExecuteNonQuery();
                 }
 
@@ -153,52 +171,54 @@ namespace Clave3_Grupo6
                 {
                     salarioBase = Convert.ToDouble(TxtSalario.Text);
 
+                    //Realizando cálculos actualizados
                     calcular.SalarioBase = salarioBase;
+                    calcular.Ventas = ventas;
+                    calcular.HorasExtra = horasExtra;
+
                     resultadoRenta = calcular.Renta();
                     resultadoPensionEmpleado = calcular.PensionEmpleado();
                     resultadoPensionEmpleador = calcular.PensionEmpleador();
                     resultadoSeguro = calcular.Seguro();
+                    resultadoBonoVentas = calcular.BonoVentas();
+                    resultadoBonoHorasExtra = calcular.BonoHorasExtra();
+                    salarioNeto = salarioBase + resultadoBonoVentas + resultadoBonoHorasExtra - resultadoRenta - resultadoPensionEmpleado - resultadoSeguro;
 
-
-                    sql = "UPDATE gerencia_ventas SET salarioBase='" + salarioBase + "' , renta='" + resultadoRenta + "', seguroPensionesEmpleado='" + resultadoPensionEmpleado + "', seguroPensionesEmpleador='" + resultadoPensionEmpleador + "', seguroSocial='" + resultadoSeguro + "' WHERE id='" + id + "'";
+                    sql = "UPDATE gerencia_ventas SET salarioBase='" + salarioBase + "', bonoVentas='" + resultadoBonoVentas + "', bonoHorasExtra='" + resultadoBonoHorasExtra + "' , renta='" + resultadoRenta + "', seguroPensionesEmpleado='" + resultadoPensionEmpleado + "', seguroPensionesEmpleador='" + resultadoPensionEmpleador + "', seguroSocial='" + resultadoSeguro + "', salarioNeto ='" + salarioNeto + "' WHERE id='" + id + "'";
 
                     //Guardando información en la base de datos
-                    MySqlCommand comando = new MySqlCommand(sql, conexionBD);
+                    comando = new MySqlCommand(sql, conexionBD);
                     comando.ExecuteNonQuery();
                 }
 
                 if (TxtVentas.Text != string.Empty)
                 {
-                    ventas = Convert.ToDouble(TxtVentas.Text);
+                    ventas = Convert.ToInt32(TxtVentas.Text);
 
+                    //Realizando cálculos actualizados
                     calcular.Ventas = ventas;
+                    calcular.SalarioBase = salarioBase;
                     resultadoBonoVentas = calcular.BonoVentas();
+                    salarioNeto = salarioBase + bonoHorasExtra + resultadoBonoVentas - renta - pensionEmpleado - seguro;
 
-                    sql = "UPDATE gerencia_ventas SET ventas='" + ventas + "', bonoVentas='" + resultadoBonoVentas + "' WHERE id='" + id + "'";
+                    sql = "UPDATE gerencia_ventas SET ventas='" + ventas + "', bonoVentas='" + resultadoBonoVentas + "', salarioNeto ='" + salarioNeto + "' WHERE id='" + id + "'";
 
                     //Guardando información en la base de datos
-                    MySqlCommand comando = new MySqlCommand(sql, conexionBD);
+                    comando = new MySqlCommand(sql, conexionBD);
                     comando.ExecuteNonQuery();
                 }
 
                 if (txtHorasExtra.Text != string.Empty)
                 {
                     horasExtra = Convert.ToInt32(txtHorasExtra.Text);
-                    sql = "SELECT salarioBase FROM gerencia_ventas WHERE id='" + id + "'";
 
-                    //Guardando información en la base de datos
-                    MySqlDataReader reader = null;
-                    MySqlCommand comando = new MySqlCommand(sql, conexionBD);
-                    reader = comando.ExecuteReader();
-
-                    MessageBox.Show(Convert.ToString(reader));
-                    //MessageBox.Show(Convert.ToString(reader.GetString(0)));
-
-                    //calcular.SalarioBase = Convert.ToDouble(reader.GetString(0));
+                    //Realizando cálculos actualizados
                     calcular.HorasExtra = horasExtra;
+                    calcular.SalarioBase = salarioBase;
                     resultadoBonoHorasExtra = calcular.BonoHorasExtra();
+                    salarioNeto = salarioBase + resultadoBonoHorasExtra + bonoVentas - renta - pensionEmpleado - seguro;
 
-                    sql = "UPDATE gerencia_ventas SET horasExtra='" + horasExtra + "',bonoHorasExtra='" + resultadoBonoHorasExtra + "' WHERE id='" + id + "'";
+                    sql = "UPDATE gerencia_ventas SET horasExtra='" + horasExtra + "', bonoHorasExtra='" + resultadoBonoHorasExtra + "', salarioNeto ='" + salarioNeto + "' WHERE id='" + id + "'";
 
                     //Guardando información en la base de datos
                     comando = new MySqlCommand(sql, conexionBD);
@@ -206,8 +226,6 @@ namespace Clave3_Grupo6
                 }
 
                 MessageBox.Show("Datos actualizados exitosamente!");
-                //Realizando los cálculos necesarios 
-                //salarioNeto = salarioBase + resultadoBonoVentas + resultadoBonoHorasExtra - resultadoBonoVentas - resultadoRenta - resultadoPensionEmpleado - resultadoSeguro;
 
                 //Cerrando conexión a base de datos
                 conexionBD.Close();

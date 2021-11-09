@@ -289,6 +289,7 @@
             this.BtnMostrar.TabIndex = 27;
             this.BtnMostrar.Text = "Mostrar planillas";
             this.BtnMostrar.UseVisualStyleBackColor = true;
+            this.BtnMostrar.Click += new System.EventHandler(this.BtnMostrar_Click);
             // 
             // BtnEliminar
             // 
@@ -312,6 +313,7 @@
             this.BtnActualizar.TabIndex = 25;
             this.BtnActualizar.Text = "Actualizar datos";
             this.BtnActualizar.UseVisualStyleBackColor = true;
+            this.BtnActualizar.Click += new System.EventHandler(this.BtnActualizar_Click);
             // 
             // BtnSalir
             // 
@@ -375,7 +377,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gerencia de administración";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.formAdministracion_FormClosing);
-            this.Load += new System.EventHandler(this.formAdministracion_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DgvPlanilla)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
