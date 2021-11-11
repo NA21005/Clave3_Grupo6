@@ -29,17 +29,6 @@
         private void InitializeComponent()
         {
             this.DgvPlanilla = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cargo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SalarioBase = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HorasExtra = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BonoHorasExtra = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Renta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SeguroPensionesEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SeguroPensionesEmpleador = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SeguroSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SalarioNeto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BtnRegresar = new System.Windows.Forms.Button();
             this.BtnAgregar = new System.Windows.Forms.Button();
             this.BtnLimpiar = new System.Windows.Forms.Button();
@@ -66,79 +55,12 @@
             // DgvPlanilla
             // 
             this.DgvPlanilla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvPlanilla.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id,
-            this.Nombre,
-            this.Cargo,
-            this.SalarioBase,
-            this.HorasExtra,
-            this.BonoHorasExtra,
-            this.Renta,
-            this.SeguroPensionesEmpleado,
-            this.SeguroPensionesEmpleador,
-            this.SeguroSocial,
-            this.SalarioNeto});
             this.DgvPlanilla.Location = new System.Drawing.Point(43, 235);
             this.DgvPlanilla.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DgvPlanilla.Name = "DgvPlanilla";
             this.DgvPlanilla.RowTemplate.Height = 24;
             this.DgvPlanilla.Size = new System.Drawing.Size(840, 306);
             this.DgvPlanilla.TabIndex = 31;
-            // 
-            // id
-            // 
-            this.id.HeaderText = "Id";
-            this.id.Name = "id";
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            // 
-            // Cargo
-            // 
-            this.Cargo.HeaderText = "Cargo";
-            this.Cargo.Name = "Cargo";
-            // 
-            // SalarioBase
-            // 
-            this.SalarioBase.HeaderText = "Salario Base";
-            this.SalarioBase.Name = "SalarioBase";
-            // 
-            // HorasExtra
-            // 
-            this.HorasExtra.HeaderText = "Horas extra";
-            this.HorasExtra.Name = "HorasExtra";
-            // 
-            // BonoHorasExtra
-            // 
-            this.BonoHorasExtra.HeaderText = "Bono horas extra";
-            this.BonoHorasExtra.Name = "BonoHorasExtra";
-            // 
-            // Renta
-            // 
-            this.Renta.HeaderText = "Renta";
-            this.Renta.Name = "Renta";
-            // 
-            // SeguroPensionesEmpleado
-            // 
-            this.SeguroPensionesEmpleado.HeaderText = "Seguro de pensiones (empleado)";
-            this.SeguroPensionesEmpleado.Name = "SeguroPensionesEmpleado";
-            // 
-            // SeguroPensionesEmpleador
-            // 
-            this.SeguroPensionesEmpleador.HeaderText = "Seguro de pensiones (empleador)";
-            this.SeguroPensionesEmpleador.Name = "SeguroPensionesEmpleador";
-            // 
-            // SeguroSocial
-            // 
-            this.SeguroSocial.HeaderText = "Seguro social";
-            this.SeguroSocial.Name = "SeguroSocial";
-            // 
-            // SalarioNeto
-            // 
-            this.SalarioNeto.HeaderText = "Salario neto";
-            this.SalarioNeto.Name = "SalarioNeto";
             // 
             // BtnRegresar
             // 
@@ -406,16 +328,5 @@
         private System.Windows.Forms.Button BtnSalir;
         private System.Windows.Forms.TextBox txtHorasExtra;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cargo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SalarioBase;
-        private System.Windows.Forms.DataGridViewTextBoxColumn HorasExtra;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BonoHorasExtra;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Renta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SeguroPensionesEmpleado;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SeguroPensionesEmpleador;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SeguroSocial;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SalarioNeto;
     }
 }

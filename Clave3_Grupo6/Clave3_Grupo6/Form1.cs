@@ -12,6 +12,12 @@ namespace Clave3_Grupo6
 {
     public partial class formIniciarSesion : Form
     {
+        /// <summary>
+        /// Autores:
+        ///     - Emerson Alexander Cueva Carbajal (CC21045)
+        ///     - Cristian Armando Navarro Aguilar (NA21005)
+        /// Fecha: 12/11/2021
+        /// </summary>
         public formIniciarSesion()
         {
             InitializeComponent();

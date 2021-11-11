@@ -15,17 +15,10 @@ namespace Clave3_Grupo6
         private const double seguro = 0.03;
         private double bonoVentas;
 
-        //Obtencion de variables para realizar el calculo
-        //public double bonodeterminado { get; set; }
-        //public double venta { get; set; }
-        //public double descuentoderenta { get; set; }
-        //public double salarionormal { get; set; }
-        //public double descuentopensionempleado { get; set; }
-        //public double descuentopensionempleador { get; set; }
-        //public double descuentoseguro { get; set; }
-        //public double sumabono { get; set; }
-
-
+        /// <summary>
+        /// Este método se encarga de calcular el bono en base a la cantidad de ventas de cada empleado
+        /// </summary>
+        /// <returns></returns>
         public double BonoVentas()
         {
             double bono = 0;
@@ -51,61 +44,54 @@ namespace Clave3_Grupo6
             }
 
             bonoVentas = bono;
-            //if (ventas > 25)
-            //{
-            //    if (ventas > 50)
-            //    {
-            //        if (ventas > 100)
-            //        {
-            //            bono = 0.20;
-            //        }
-            //    }
-            //    else
-            //    {
-            //        bono = 0.15;
-            //    }
-            //}
-            //else
-            //{
-            //    bono = 0.10;
-            //}
-            //bonosdeterminados = bono;
 
             return bono;
         }
 
+        /// <summary>
+        /// Método encargado de calcular la renta que deberá pagar el empleado
+        /// </summary>
+        /// <returns></returns>
         public double Renta ()
         {
             double descuentoRenta = renta * salarioBase;
             return descuentoRenta;
         }
 
+        /// <summary>
+        /// Se encarga de establecer la cantidad de pensión a cancelar
+        /// </summary>
+        /// <returns></returns>
         public double PensionEmpleado ()
-
         {
             double descuentoPensionEmpleado = pensionEmpleado * salarioBase;
             return descuentoPensionEmpleado;
         }
 
+        /// <summary>
+        /// Método que se encarga de calcular la pensión por parte del empleador
+        /// </summary>
+        /// <returns></returns>
         public double PensionEmpleador()
-
         {
             double descuentoPensionEmpleador = pensionEmpleador * salarioBase;
             return descuentoPensionEmpleador;
         }
 
+        /// <summary>
+        /// Este método calcula el seguro a cancelar
+        /// </summary>
+        /// <returns></returns>
         public double Seguro ()
         {
             double descuentoSeguro = seguro * salarioBase;
             return descuentoSeguro;
         }
 
-        //public double Bono()
-        //{
-        //    double Bonificacion = bonoVentas * salarioBase;
-        //    return Bonificacion;
-        //}
-
+        /// <summary>
+        /// Se encarga de calcular el bono a pagar por la horas extras trabajadas
+        /// </summary>
+        /// <returns></returns>
         public double BonoHorasExtra ()
         {
             double bonoHorasExtra;
