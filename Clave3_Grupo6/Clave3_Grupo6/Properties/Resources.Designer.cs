@@ -73,6 +73,16 @@ namespace Clave3_Grupo6.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Copia_de_Logotipo_Hípster_Menta_Geométrico {
+            get {
+                object obj = ResourceManager.GetObject("Copia de Logotipo Hípster Menta Geométrico", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Logo_Gutes_Bier {
             get {
                 object obj = ResourceManager.GetObject("Logo Gutes Bier", resourceCulture);

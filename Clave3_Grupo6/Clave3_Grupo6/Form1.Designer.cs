@@ -36,10 +36,10 @@
             this.TxtUsuario = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.BtnInicioSesion = new System.Windows.Forms.Button();
-            this.BtnSalir = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.TtMensaje = new System.Windows.Forms.ToolTip(this.components);
+            this.BtnSalir = new System.Windows.Forms.Button();
+            this.BtnInicioSesion = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -47,7 +47,7 @@
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(96)))), ((int)(((byte)(138)))));
+            this.label1.BackColor = System.Drawing.Color.Indigo;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
@@ -60,7 +60,7 @@
             // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label2.Location = new System.Drawing.Point(659, 102);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -71,18 +71,18 @@
             // 
             // label3
             // 
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label3.Location = new System.Drawing.Point(659, 272);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(137, 25);
+            this.label3.Size = new System.Drawing.Size(165, 25);
             this.label3.TabIndex = 3;
             this.label3.Text = "Contraseña:";
             // 
             // TxtContraseña
             // 
-            this.TxtContraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(96)))), ((int)(((byte)(138)))));
+            this.TxtContraseña.BackColor = System.Drawing.Color.Indigo;
             this.TxtContraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtContraseña.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtContraseña.ForeColor = System.Drawing.SystemColors.Info;
@@ -95,7 +95,7 @@
             // 
             // TxtUsuario
             // 
-            this.TxtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(96)))), ((int)(((byte)(138)))));
+            this.TxtUsuario.BackColor = System.Drawing.Color.Indigo;
             this.TxtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtUsuario.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtUsuario.ForeColor = System.Drawing.SystemColors.Info;
@@ -107,7 +107,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(96)))), ((int)(((byte)(138)))));
+            this.panel1.BackColor = System.Drawing.Color.Indigo;
             this.panel1.Controls.Add(this.TxtUsuario);
             this.panel1.Location = new System.Drawing.Point(664, 171);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
@@ -117,28 +117,13 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(96)))), ((int)(((byte)(138)))));
+            this.panel2.BackColor = System.Drawing.Color.Indigo;
             this.panel2.Controls.Add(this.TxtContraseña);
             this.panel2.Location = new System.Drawing.Point(664, 330);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(240, 55);
             this.panel2.TabIndex = 7;
-            // 
-            // BtnInicioSesion
-            // 
-            this.BtnInicioSesion.BackColor = System.Drawing.Color.Transparent;
-            this.BtnInicioSesion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnInicioSesion.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnInicioSesion.Image = global::Clave3_Grupo6.Properties.Resources.btn;
-            this.BtnInicioSesion.Location = new System.Drawing.Point(664, 446);
-            this.BtnInicioSesion.Margin = new System.Windows.Forms.Padding(4);
-            this.BtnInicioSesion.Name = "BtnInicioSesion";
-            this.BtnInicioSesion.Size = new System.Drawing.Size(131, 32);
-            this.BtnInicioSesion.TabIndex = 8;
-            this.BtnInicioSesion.Text = "Iniciar sesión";
-            this.BtnInicioSesion.UseVisualStyleBackColor = false;
-            this.BtnInicioSesion.Click += new System.EventHandler(this.BtnInicioSesion_Click);
             // 
             // BtnSalir
             // 
@@ -156,10 +141,25 @@
             this.BtnSalir.UseVisualStyleBackColor = true;
             this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
+            // BtnInicioSesion
+            // 
+            this.BtnInicioSesion.BackColor = System.Drawing.Color.Transparent;
+            this.BtnInicioSesion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnInicioSesion.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnInicioSesion.Image = global::Clave3_Grupo6.Properties.Resources.btn;
+            this.BtnInicioSesion.Location = new System.Drawing.Point(664, 446);
+            this.BtnInicioSesion.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnInicioSesion.Name = "BtnInicioSesion";
+            this.BtnInicioSesion.Size = new System.Drawing.Size(131, 32);
+            this.BtnInicioSesion.TabIndex = 8;
+            this.BtnInicioSesion.Text = "Iniciar sesión";
+            this.BtnInicioSesion.UseVisualStyleBackColor = false;
+            this.BtnInicioSesion.Click += new System.EventHandler(this.BtnInicioSesion_Click);
+            // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(75)))), ((int)(((byte)(196)))));
-            this.pictureBox1.BackgroundImage = global::Clave3_Grupo6.Properties.Resources.Logo_Gutes_Bier;
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(173)))), ((int)(((byte)(255)))));
+            this.pictureBox1.BackgroundImage = global::Clave3_Grupo6.Properties.Resources.Copia_de_Logotipo_Hípster_Menta_Geométrico;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Location = new System.Drawing.Point(67, 22);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
@@ -172,7 +172,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(75)))), ((int)(((byte)(196)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(173)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.BtnSalir);
             this.Controls.Add(this.BtnInicioSesion);

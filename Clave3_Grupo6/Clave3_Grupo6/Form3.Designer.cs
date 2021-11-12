@@ -41,22 +41,22 @@
             this.TxtVentas = new System.Windows.Forms.TextBox();
             this.TxtSalario = new System.Windows.Forms.TextBox();
             this.DgvPlanilla = new System.Windows.Forms.DataGridView();
+            this.TxtHorasExtra = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.BtnSalir = new System.Windows.Forms.Button();
             this.BtnRegresar = new System.Windows.Forms.Button();
             this.BtnAgregar = new System.Windows.Forms.Button();
             this.BtnLimpiar = new System.Windows.Forms.Button();
             this.BtnMostrar = new System.Windows.Forms.Button();
             this.BtnEliminar = new System.Windows.Forms.Button();
             this.BtnActualizar = new System.Windows.Forms.Button();
-            this.BtnSalir = new System.Windows.Forms.Button();
-            this.TxtHorasExtra = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvPlanilla)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(96)))), ((int)(((byte)(138)))));
+            this.panel1.BackColor = System.Drawing.Color.Indigo;
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
@@ -179,13 +179,49 @@
             // 
             // DgvPlanilla
             // 
+            this.DgvPlanilla.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.DgvPlanilla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvPlanilla.GridColor = System.Drawing.SystemColors.ControlLight;
             this.DgvPlanilla.Location = new System.Drawing.Point(45, 310);
             this.DgvPlanilla.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DgvPlanilla.Name = "DgvPlanilla";
             this.DgvPlanilla.RowTemplate.Height = 24;
             this.DgvPlanilla.Size = new System.Drawing.Size(840, 306);
             this.DgvPlanilla.TabIndex = 15;
+            // 
+            // TxtHorasExtra
+            // 
+            this.TxtHorasExtra.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtHorasExtra.Location = new System.Drawing.Point(200, 240);
+            this.TxtHorasExtra.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TxtHorasExtra.Name = "TxtHorasExtra";
+            this.TxtHorasExtra.Size = new System.Drawing.Size(200, 27);
+            this.TxtHorasExtra.TabIndex = 35;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(40, 240);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(130, 27);
+            this.label8.TabIndex = 34;
+            this.label8.Text = "Horas extra:";
+            // 
+            // BtnSalir
+            // 
+            this.BtnSalir.BackColor = System.Drawing.Color.White;
+            this.BtnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSalir.Image = global::Clave3_Grupo6.Properties.Resources.btn;
+            this.BtnSalir.Location = new System.Drawing.Point(931, 510);
+            this.BtnSalir.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnSalir.Name = "BtnSalir";
+            this.BtnSalir.Size = new System.Drawing.Size(149, 28);
+            this.BtnSalir.TabIndex = 33;
+            this.BtnSalir.Text = "Salir";
+            this.BtnSalir.UseVisualStyleBackColor = false;
+            this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
             // BtnRegresar
             // 
@@ -259,45 +295,11 @@
             this.BtnActualizar.UseVisualStyleBackColor = true;
             this.BtnActualizar.Click += new System.EventHandler(this.BtnActualizar_Click);
             // 
-            // BtnSalir
-            // 
-            this.BtnSalir.BackColor = System.Drawing.Color.White;
-            this.BtnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSalir.Image = global::Clave3_Grupo6.Properties.Resources.btn;
-            this.BtnSalir.Location = new System.Drawing.Point(931, 510);
-            this.BtnSalir.Margin = new System.Windows.Forms.Padding(4);
-            this.BtnSalir.Name = "BtnSalir";
-            this.BtnSalir.Size = new System.Drawing.Size(149, 28);
-            this.BtnSalir.TabIndex = 33;
-            this.BtnSalir.Text = "Salir";
-            this.BtnSalir.UseVisualStyleBackColor = false;
-            this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
-            // 
-            // TxtHorasExtra
-            // 
-            this.TxtHorasExtra.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtHorasExtra.Location = new System.Drawing.Point(200, 240);
-            this.TxtHorasExtra.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.TxtHorasExtra.Name = "TxtHorasExtra";
-            this.TxtHorasExtra.Size = new System.Drawing.Size(200, 27);
-            this.TxtHorasExtra.TabIndex = 35;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(40, 240);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(130, 27);
-            this.label8.TabIndex = 34;
-            this.label8.Text = "Horas extra:";
-            // 
             // formVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(75)))), ((int)(((byte)(196)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(173)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1123, 653);
             this.Controls.Add(this.TxtHorasExtra);
             this.Controls.Add(this.label8);

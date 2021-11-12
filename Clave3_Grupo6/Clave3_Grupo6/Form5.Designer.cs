@@ -54,7 +54,9 @@
             // 
             // DgvPlanilla
             // 
+            this.DgvPlanilla.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.DgvPlanilla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvPlanilla.GridColor = System.Drawing.SystemColors.ControlLight;
             this.DgvPlanilla.Location = new System.Drawing.Point(43, 235);
             this.DgvPlanilla.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DgvPlanilla.Name = "DgvPlanilla";
@@ -196,7 +198,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(96)))), ((int)(((byte)(138)))));
+            this.panel1.BackColor = System.Drawing.Color.Indigo;
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
@@ -275,7 +277,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(75)))), ((int)(((byte)(196)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(173)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1123, 574);
             this.Controls.Add(this.TxtHorasExtra);
             this.Controls.Add(this.label6);
