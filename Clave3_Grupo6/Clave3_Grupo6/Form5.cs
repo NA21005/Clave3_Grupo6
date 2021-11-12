@@ -48,44 +48,51 @@ namespace Clave3_Grupo6
                 string nombre = TxtNombre.Text;
                 string cargo = TxtCargo.Text;
                 double salarioBase = Convert.ToDouble(TxtSalario.Text);
-                int horasExtra = Convert.ToInt32(txtHorasExtra.Text);
+                int horasExtra = Convert.ToInt32(TxtHorasExtra.Text);
 
-                //Instanciando clase
-                Calcular calcular = new Calcular();
-
-                //Realizando los cálculos necesarios 
-                calcular.SalarioBase = salarioBase;
-                calcular.HorasExtra = horasExtra;
-                resultadoRenta = calcular.Renta();
-                resultadoPensionEmpleado = calcular.PensionEmpleado();
-                resultadoPensionEmpleador = calcular.PensionEmpleador();
-                resultadoSeguro = calcular.Seguro();
-                resultadoBonoHorasExtra = calcular.BonoHorasExtra();
-                salarioNeto = salarioBase + resultadoBonoHorasExtra - resultadoRenta - resultadoPensionEmpleado - resultadoSeguro;
-
-                //Creando comando para guardar la información del empleado
-                string sql = "INSERT INTO gerencia_transporte (`Nombre`, `Cargo`, `Salario base`, `Horas extra`, `Bono horas extra`, `Renta`, `Seguro de pensiones (Empleado)`, `Seguro de pensiones (Empleador)`, `Seguro social`, `Salario neto`) VALUES ('" + nombre + "' , '" + cargo + "' , '" + salarioBase + "' , '" + horasExtra + "' , '" + resultadoBonoHorasExtra + "' , '" + resultadoRenta + "' , '" + resultadoPensionEmpleado + "' , '" + resultadoPensionEmpleador + "' , '" + resultadoSeguro + "' , '" + salarioNeto + "')";
-
-                //Abriendo conexión de base de datos
-                MySqlConnection conexionBD = CRUD.conexion();
-                conexionBD.Open();
-
-                try
+                if (nombre != "" && cargo != "")
                 {
-                    //Guardando información en la base de datos
-                    MySqlCommand comando = new MySqlCommand(sql, conexionBD);
-                    comando.ExecuteNonQuery();
-                    MessageBox.Show("Empleado agregado exitosamente!");
+                    //Instanciando clase
+                    Calcular calcular = new Calcular();
+
+                    //Realizando los cálculos necesarios 
+                    calcular.SalarioBase = salarioBase;
+                    calcular.HorasExtra = horasExtra;
+                    resultadoRenta = calcular.Renta();
+                    resultadoPensionEmpleado = calcular.PensionEmpleado();
+                    resultadoPensionEmpleador = calcular.PensionEmpleador();
+                    resultadoSeguro = calcular.Seguro();
+                    resultadoBonoHorasExtra = calcular.BonoHorasExtra();
+                    salarioNeto = salarioBase + resultadoBonoHorasExtra - resultadoRenta - resultadoPensionEmpleado - resultadoSeguro;
+
+                    //Creando comando para guardar la información del empleado
+                    string sql = "INSERT INTO gerencia_transporte (`Nombre`, `Cargo`, `Salario base`, `Horas extra`, `Bono horas extra`, `Renta`, `Seguro de pensiones (Empleado)`, `Seguro de pensiones (Empleador)`, `Seguro social`, `Salario neto`) VALUES ('" + nombre + "' , '" + cargo + "' , '" + salarioBase + "' , '" + horasExtra + "' , '" + resultadoBonoHorasExtra + "' , '" + resultadoRenta + "' , '" + resultadoPensionEmpleado + "' , '" + resultadoPensionEmpleador + "' , '" + resultadoSeguro + "' , '" + salarioNeto + "')";
+
+                    //Abriendo conexión de base de datos
+                    MySqlConnection conexionBD = CRUD.conexion();
+                    conexionBD.Open();
+
+                    try
+                    {
+                        //Guardando información en la base de datos
+                        MySqlCommand comando = new MySqlCommand(sql, conexionBD);
+                        comando.ExecuteNonQuery();
+                        MessageBox.Show("Empleado agregado exitosamente!");
+                    }
+                    catch (MySqlException ex)
+                    {
+                        //Manejando excepciones
+                        MessageBox.Show("Error al guardar: " + ex.Message);
+                    }
+                    finally
+                    {
+                        //Cerrando conexión a base de datos
+                        conexionBD.Close();
+                    }
                 }
-                catch (MySqlException ex)
+                else
                 {
-                    //Manejando excepciones
-                    MessageBox.Show("Error al guardar: " + ex.Message);
-                }
-                finally
-                {
-                    //Cerrando conexión a base de datos
-                    conexionBD.Close();
+                    MessageBox.Show("Error al agregar empleado: datos incompletos");
                 }
             }
             catch (Exception error)
@@ -204,9 +211,9 @@ namespace Clave3_Grupo6
                     comando.ExecuteNonQuery();
                 }
 
-                if (txtHorasExtra.Text != string.Empty)
+                if (TxtHorasExtra.Text != string.Empty)
                 {
-                    horasExtra = Convert.ToInt32(txtHorasExtra.Text);
+                    horasExtra = Convert.ToInt32(TxtHorasExtra.Text);
 
                     //Realizando cálculos actualizados
                     calcular.HorasExtra = horasExtra;
@@ -239,10 +246,10 @@ namespace Clave3_Grupo6
                 MySqlConnection conexionBD = CRUD.conexion();
                 conexionBD.Open();
 
+                //Mostrando datos registrados
                 MySqlCommand codigo = new MySqlCommand();
                 codigo.Connection = conexionBD;
                 codigo.CommandText = ("SELECT * FROM gerencia_transporte");
-                //string sql = "SELECT * FROM gerencia_ventas";
                 MySqlDataAdapter seleccionar = new MySqlDataAdapter();
                 seleccionar.SelectCommand = codigo;
                 DataTable consulta = new DataTable();
@@ -256,6 +263,15 @@ namespace Clave3_Grupo6
             {
                 MessageBox.Show(error.Message);
             }
+        }
+
+        private void BtnLimpiar_Click(object sender, EventArgs e)
+        {
+            //Limpiando campos del formulario
+            TxtNombre.Clear();
+            TxtCargo.Clear();
+            TxtSalario.Clear();
+            TxtHorasExtra.Clear();
         }
     }
 }

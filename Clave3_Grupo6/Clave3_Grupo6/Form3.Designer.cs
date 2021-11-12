@@ -48,7 +48,7 @@
             this.BtnEliminar = new System.Windows.Forms.Button();
             this.BtnActualizar = new System.Windows.Forms.Button();
             this.BtnSalir = new System.Windows.Forms.Button();
-            this.txtHorasExtra = new System.Windows.Forms.TextBox();
+            this.TxtHorasExtra = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvPlanilla)).BeginInit();
@@ -221,6 +221,7 @@
             this.BtnLimpiar.TabIndex = 12;
             this.BtnLimpiar.Text = "Limpiar campos";
             this.BtnLimpiar.UseVisualStyleBackColor = true;
+            this.BtnLimpiar.Click += new System.EventHandler(this.BtnLimpiar_Click);
             // 
             // BtnMostrar
             // 
@@ -272,14 +273,14 @@
             this.BtnSalir.UseVisualStyleBackColor = false;
             this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
-            // txtHorasExtra
+            // TxtHorasExtra
             // 
-            this.txtHorasExtra.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHorasExtra.Location = new System.Drawing.Point(200, 240);
-            this.txtHorasExtra.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtHorasExtra.Name = "txtHorasExtra";
-            this.txtHorasExtra.Size = new System.Drawing.Size(200, 27);
-            this.txtHorasExtra.TabIndex = 35;
+            this.TxtHorasExtra.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtHorasExtra.Location = new System.Drawing.Point(200, 240);
+            this.TxtHorasExtra.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TxtHorasExtra.Name = "TxtHorasExtra";
+            this.TxtHorasExtra.Size = new System.Drawing.Size(200, 27);
+            this.TxtHorasExtra.TabIndex = 35;
             // 
             // label8
             // 
@@ -298,7 +299,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(75)))), ((int)(((byte)(196)))));
             this.ClientSize = new System.Drawing.Size(1123, 653);
-            this.Controls.Add(this.txtHorasExtra);
+            this.Controls.Add(this.TxtHorasExtra);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.BtnSalir);
             this.Controls.Add(this.DgvPlanilla);
@@ -352,7 +353,7 @@
         private System.Windows.Forms.Button BtnRegresar;
         private System.Windows.Forms.DataGridView DgvPlanilla;
         private System.Windows.Forms.Button BtnSalir;
-        private System.Windows.Forms.TextBox txtHorasExtra;
+        private System.Windows.Forms.TextBox TxtHorasExtra;
         private System.Windows.Forms.Label label8;
     }
 }
